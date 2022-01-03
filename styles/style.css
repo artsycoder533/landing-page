@@ -203,3 +203,23 @@ body{
     -o-object-fit: cover;
        object-fit: cover;
 }
+
+/* quote section */
+.quote {
+    background: var(--quote--background);
+}
+
+.quote-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.quote-text{
+    font-size: var(--quote-text);
+    color: var(--quote-text-clr);
+}
+.quote-author{
+    align-self: flex-end;
+}
