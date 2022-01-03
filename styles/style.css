@@ -67,6 +67,7 @@ a:active {
 .btn {
   padding: 0.5rem 2rem;
   border-radius: var(--border-radius2);
+  cursor: pointer;
 }
 
 body {
@@ -121,28 +122,45 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--background-color);
+  width: 100%;
   height: 60vh;
 }
 
+@media screen and (max-width: 767px){
+    .hero{
+        height: auto;
+    }
+}
+
 .hero-container {
+width: 100%;
   display: flex;
-  gap: var(--gap4);
-  height: 250px;
+  /* gap: var(--gap4); */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+@media screen and (max-width: 767px){
+    .hero-container{
+        flex-direction: column;
+        padding: var(--padding1);
+        gap: var(--gap1);
+    }
 }
 
 .hero-text,
 .hero-img {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
+  width: 100%;
 }
 
 .hero-text {
-  display: flex;
   gap: var(--gap1);
-  justify-content: space-between;
-  flex-shrink: 0;
+  /* justify-content: space-between; */
+  /* padding: var(--padding2); */
 }
 
 .hero-title {
@@ -164,18 +182,15 @@ body {
 }
 
 .hero-img {
-  border: 1px solid var(--black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(--hero-secondary-text-clr);
-  background: var(--darkgray);
-  flex-shrink: 0;
+  /* background: var(--darkgray); */
+ -o-object-fit: cover;
+    object-fit: cover; 
 }
 
 /* info section */
 .info {
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +208,7 @@ body {
 
 .cards {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap2);
